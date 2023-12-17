@@ -1,4 +1,4 @@
-//opdr1
+// opdr1
 
 const myInfo = [
     {
@@ -8,9 +8,9 @@ const myInfo = [
     },
 
     {
-        name: 'jope ',
-        achternaam: 'jopje',
-        hobby: 'fortnite',
+        name: 'sunny',
+        achternaam: 'pooran',
+        hobby: 'voetball',
     }
 ]
 const htmlCode = document.querySelector('.container')
@@ -32,13 +32,13 @@ const cars = [
         merk: 'tesla',
         model: 'model 3',
         bouwjaar: '2003',
-        prijs: 50000,
+        prijs: 67000,
     },
     {
         merk: 'tesla',
         model: 'cyber truck',
         bouwjaar: '2023',
-        prijs: 50000,
+        prijs: 87000,
     },
 ]
 
@@ -50,10 +50,10 @@ for (let p = 0; p < cars.length; p++) {
     carHtml.innerHTML += `
     <div class='card'>
     <ul>
-    <li>${element.merk}</li>
-    <li>${element.bouwjaar}</li>
-    <li>${element.model}</li>
-    <li>${element.prijs}</li>
+    <li>Brand ${element.merk}</li>
+    <li>Year ${element.bouwjaar}</li>
+    <li>Model ${element.model}</li>
+    <li>Price ${element.prijs}</li>
     </ul>
     </div>`;
     total += element.prijs
@@ -61,8 +61,89 @@ for (let p = 0; p < cars.length; p++) {
 
 carHtml.innerHTML += `
 <div class= "card">
-<b>${total}</b>
+<b>totaal: ${total}</b>
 </div>`;
 
 
 
+
+// opdr3
+
+// const course = [
+//     {
+//         firstname: "Mohammed",
+//         classname: "B1N",
+//         course: "ICT",
+//     },
+//     {
+//         firstname: "Amer",
+//         classname: "B1H",
+//         course: "IB",
+//     },
+//     {
+//         firstname: "Ahmed",
+//         classname: "B1k",
+//         course: "CS",
+//     },
+// ];
+// const container = document.querySelector('.container')
+// for (let i = 0; i < course.length; i++) {
+//     const element = course[i];
+//     container.innerHTML += `
+//     <div class="card">
+//     <li>firstname:${element.firstname}</li>
+//     <li>classname:${element.classname}</li>
+//     <li>course:${element.course}</li>
+//     </div>`;
+// };
+
+
+// function createCard(item, list) {
+//     const li = document.createElement("li");
+//     li.className = "card";
+
+//     const title = document.createElement("h3");
+//     title.textContent = item.title;
+
+//     const image = document.createElement("img");
+//     image.src = item.url;
+
+//     const content = document.createElement("p");
+//     content.textContent = item.description || "Description not available"; // Assuming there is a description property
+
+//     li.appendChild(title);
+//     li.appendChild(image);
+//     li.appendChild(content);
+//     list.appendChild(li);
+// }
+
+const students = [
+    {
+        firstname: "yannick",
+        classname: "B1N",
+        course: "ICT",
+    },
+    {
+        firstname: "sunny",
+        classname: "B1t",
+        course: "IB",
+    },
+    {
+        firstname: "mike",
+        classname: "B1k",
+        course: "CS",
+    },
+];
+
+const container = document.querySelector('.container');
+
+for (let i = 0; i < students.length; i++) {
+    const student = students[i];
+    container.innerHTML += `
+        <div class="card">
+            <li>Firstname: ${student.firstname}</li>
+            <li>Classname: ${student.classname}</li>
+            <li>Course: ${student.course}</li>
+        </div>
+    `;
+}
