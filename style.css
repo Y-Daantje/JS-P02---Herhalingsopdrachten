@@ -12,3 +12,13 @@
     display: flex;
     justify-content: space-around;
 }
+
+.card-memes{
+    width: 200px;
+    border: 2px solid rgb(157, 255, 0);
+    background-color: rgb(131, 114, 161);
+    color: white;
+    padding: 20px;
+    font-size: x-large;
+    float: left;
+}

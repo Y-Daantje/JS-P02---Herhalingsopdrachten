@@ -147,3 +147,23 @@ for (let i = 0; i < students.length; i++) {
         </div>
     `;
 }
+
+//opdr4
+
+fetch('https://meme-api.com/gimme/5')
+    .then(response => response.json())
+    .then(data => {
+        console.log('meme: ', data);
+        const memes = data.memes
+        for (let m = 0; m < memes.length; m++) {
+            const memepost = memes[m];
+            console.log('your meme posts are: ', memepost);
+            container.innerHTML += `
+            <div class= card-memes>
+            <li>${memepost.title}</li>
+            <li>${memepost.author}</li>
+            <li>${memepost.subreddit}</li>
+            </div>
+            `
+        };
+    });
